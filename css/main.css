@@ -662,8 +662,7 @@ body, div, h1, h2, h3, h4, h5, h6, p, li, td, th, * {
 
 body {
   background-color: #F6F6F6;
-  font-size: 90%;
-  border: 10px solid red; }
+  font-size: 90%; }
 
 @media only screen and (min-width: 900px) {
   .white-box {
