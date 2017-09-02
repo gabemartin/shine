@@ -1,0 +1,80 @@
+$neat-grid: ( columns: 12, gutter: 15px )
+
+.row
+  +grid-container
+  max-width: 1200px
+  margin: auto
+  .col
+    +grid-column(12)
+
+// header#main-header
+//   +grid-container
+//   .logo
+//     +grid-column(12)
+//     +grid-media($bp_900)
+//       +grid-column(3)
+
+// header#main-header
+// 	nav.nav
+// 		position: absolute
+// 		top: 1rem
+// 		right: 1rem
+// 		+grid-media($bp_900)
+// 			position: relative
+// 			top: auto
+// 			right: auto
+// 			+grid-column(12)
+
+section#content
+  +grid-column(12)
+  &.narrow
+    +grid-media($bp_700)
+      +grid-column(10)
+      +grid-push(1)
+
+#content
+  .row
+    +grid-collapse
+    &.cols-3 .col
+      +grid-column(12)
+      +grid-media($bp_900)
+        +grid-column(4)
+
+#wash-packages-comparison
+  +grid-column
+  +grid-collapse
+  .package
+    +grid-column(12)
+    +grid-media($bp_700)
+    	+grid-column(3)
+
+// .header-contact-info
+// 	position: relative
+// 	+grid-container
+// 	address.header-element
+// 		display: inline-block
+// 	@media only screen and (max-width: 900px)
+// 		address.header-element
+// 			display: none
+// 		.map-link
+// 			+grid-column(6)
+// 		.hours-link
+// 			+grid-column(6)
+//   +grid-media($bp_900)
+//   	+grid-column(9)
+
+.add-column
+	+grid-column(12)
+	+grid-media($bp_700)
+		+grid-column(8)
+		+grid-shift(-3)
+aside
+	+grid-column(12)
+	+grid-media($bp_700)
+		+grid-column(3)
+		+grid-shift(9)
+
+footer
+  +grid-container
+  p
+    +grid-column(12)

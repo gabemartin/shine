@@ -1,0 +1,17 @@
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return #{$remSize}rem;
+}
+@mixin fontSize($size) {
+  font-size: $size; //Fallback in px
+  font-size: calculateRem($size);
+}
+@mixin fancyPad($padding: 0) {
+	padding: 1rem;
+	@include grid-media($bp_500) {
+		padding: 3rem;
+	}
+	@include grid-media($bp_1000) {
+		padding: #{$padding};
+	}
+}

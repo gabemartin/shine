@@ -1,0 +1,187 @@
+header#main-header
+  padding-top: 15px
+  .logo
+    +grid-column(6)
+    a
+      width: 118px
+      display: inline-block
+  .header-contact-info
+    +grid-column(6)
+    text-align: right
+    .header-element
+      vertical-align: middle
+    address
+      display: none
+      +grid-media($bp_600)
+        display: inline-block
+        padding: 0 1rem 1rem 0
+    .map-link
+    .hours-link
+
+
+nav.nav
+  background-color: $black
+  .phone-number
+    display: none
+  .menu-icon
+    display: none
+  .menu
+    @extend .row
+    ul
+      +grid-column(12)
+      text-align: center
+    li
+      display: inline-block
+      +fontSize(10px)
+      a
+        display: block
+        background-color: $black
+        color: #fff
+        text-transform: uppercase
+        padding: 1rem .3rem
+        text-decoration: none
+        font-weight: bold
+  +grid-media($bp_800)
+    .menu
+      ul
+        text-align: left
+      li
+        +fontSize(14px)
+        border-left: 1px solid lighten($black, 10)
+        &:last-child
+          border-right: 1px solid lighten($black, 10)
+        a
+          padding: 1rem 2rem
+
+
+
+#feature-image
+  img
+    max-width: none
+    width: 100%
+    display: block
+
+#homepage-intro
+  background-color: $blue
+  margin-bottom: 2rem
+  padding-top: 2rem
+  padding-bottom: 2rem
+  .column
+    +grid-column(12)
+    text-align: center
+    *
+      color: #fff
+  .lead-in
+    font-weight: bold
+    +fontSize(18px)
+    position: relative
+    display: inline-block
+    &:before, &:after
+      display: block
+      content: ""
+      top: .8rem
+      background-color: lighten($blue, 10)
+      width: 30px
+      height: 3px
+      position: absolute
+      left: -45px
+    &:after
+      left: auto
+      right: -45px
+  h1
+    font-weight: bold
+    margin: 0
+    +fontSize(34px)
+  p
+    margin: 0
+    font-style: italic
+    +fontSize(18px)
+  +grid-media($bp_900)
+    padding-top: 4rem
+    padding-bottom: 4rem
+    .column
+      +grid-column(8)
+      +grid-push(2)
+    .lead-in
+      +fontSize(24px)
+      &:before, &:after
+        top: 1rem
+    h1
+      font-size: 5vw
+    p
+      +fontSize(26px)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// header#main-header
+//   position: relative
+//   z-index: 99999
+//   height: 74px
+//   .logo
+//     a
+//       display: inline-block
+//       border: none
+//       width: 136px
+//       padding-top: 1.2rem
+//       margin: 1rem 0 1rem $mobile_padding
+//       +grid-media($bp_900)
+//         margin: 1rem 0 1rem $desktop_padding
+//   nav.nav
+//     margin-bottom: 2rem
+//     .menu
+//       display: none
+//       transform: translateX(100%)
+//       transition-duration: .3s
+//       transition-delay: .3s
+//       +grid-media($bp_900)
+//         display: block
+//         transform: translateX(0)
+//     ul
+//       background-color: #eee
+//       @extend .row
+//       width: 100%
+//       li
+//         float: left
+//         border-right: 1px solid #ccc
+//         display: inline-block
+//         text-transform: uppercase
+//         &.page-item-2
+//           display: none
+//         &.current_page_item
+//           a
+//             color: $flow_blue
+//         a
+//           text-decoration: none
+//           font-weight: 600
+//           color: $flow_grey
+//           line-height: 44px
+//           display: block
+//           background-color: #eee
+//           padding-left: $mobile_padding
+//           padding-right: $mobile_padding
+//           +grid-media($bp_900)
+//             padding-left: $desktop_padding
+//             padding-right: $desktop_padding
+//           &:hover
+//             background-color: $flow_grey_light
+//             color: #333

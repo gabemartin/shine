@@ -1,0 +1,125 @@
+section#secondary
+  padding-bottom: 3rem
+section#main, section#secondary
+  +grid-container
+  max-width: 1200px
+  margin: auto
+  > article 
+    padding-top: 2rem
+    +grid-column(12)
+    +grid-media($bp_900)
+      +grid-column(10)
+      +grid-push(1)
+
+    h1
+      color: $purple
+      font-weight: normal
+      +fontSize(34px)
+      +grid-media($bp_900)
+        +fontSize(60px)
+
+    h2  
+      font-weight: normal
+      color: $purple
+      +fontSize(24px)
+      +grid-media($bp_900) 
+        +fontSize(28px)
+      margin-top: 2rem   
+    #contactForm 
+      padding: .5rem 1rem 2rem 1rem 
+      background-color: #fff
+      @extend .panel-style
+      label 
+        font-size: 14px
+
+      h2
+        +fontSize(20px)
+        font-weight: bold 
+        border-bottom: 1px solid #ccc
+        padding-bottom: 1rem
+        margin-bottom: 2rem
+    h3 
+      margin-top: 1rem
+      font-weight: normal 
+      +fontSize(24px)
+    .callouts h3
+      text-align: center
+    ul.thumbnails 
+      padding-top: 1rem
+    ul.colors, ul.materials
+      margin-bottom: 1rem
+      list-style: square
+      padding-left: 1.2rem 
+      text-transform: capitalize
+      li 
+        margin-bottom: .3rem
+    ul.colors  
+      list-style: none
+      padding-left: .1rem
+      li
+        em
+          display: inline-block
+          width: 14px
+          height: 14px
+          margin-bottom: -2px
+          margin-right: .5rem
+          border-radius: 4px  
+          box-shadow: 0 0 3px #999
+        span  
+          color: #333
+    p.note 
+      font-style: italic
+      font-size: .8rem
+      font-family: georgia
+    .lead
+      padding-bottom: 2rem  
+      h1 
+        margin-bottom: .5rem 
+        span 
+          opacity: 0
+          display: inline-block
+          position: absolute
+      p 
+        +grid-media($bp_900)
+          +fontSize(18px)
+#get-started
+  +grid-container
+  h3
+    +grid-column(12)
+    margin-bottom: 2rem
+  #steps
+    +grid-column(8)  
+    .row 
+      +grid-container
+      +grid-collapse
+      margin-bottom: 2rem 
+      padding-bottom: 2rem
+      border-bottom: 1px solid #ddd
+      &:last-child 
+        border-bottom: 0
+      .step 
+        font-style: italic
+        +grid-column(12) 
+      .col1 
+        +grid-column(2)
+      .col2
+        +grid-column(10)
+        h4  
+          color: $purple
+          font-weight: normal
+          +fontSize(24px)
+  aside.instructions
+    +grid-column(3)
+    +grid-push(1)
+    padding-top: 1.5rem
+    .panel 
+      @extend .panel-style
+      padding: 0
+
+    h4 
+      +fontSize(14px)
+      border-bottom: 1px solid #eee 
+      padding-bottom: .5rem
+      background-color: $purple
+      color: #fff 
+      padding: 1rem 

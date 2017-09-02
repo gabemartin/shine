@@ -1,0 +1,29 @@
+#case-studies
+  background-color: #333
+  color: #ccc
+  figure
+    margin: 0
+    padding: 0
+    text-align: center
+
+  figure img
+    width: 100%
+    max-width: 100%
+    margin: auto
+
+  .row
+    +grid-container
+    .txt 
+      padding-bottom: 2rem
+      +grid-column(12)
+      &.heading 
+        padding-bottom: 0
+        padding-top: 2rem
+        
+        
+  +grid-media($bp_900) 
+    .row
+      +grid-container
+      .txt 
+        +grid-column(10)
+        +grid-push(1)

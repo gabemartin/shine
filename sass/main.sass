@@ -1,0 +1,337 @@
+@import "parts/variables"
+@import "bourbon/_bourbon.scss"
+@import "neat/_neat.scss"
+@import "parts/mixins.scss"
+@import "parts/_typography"
+
+@import "parts/debug"
+$desktop_padding: 40px
+$mobile_padding: 0
+$blue: #5B80A1
+$black: #373C3A
+@import "bitters/_base.scss"
+@import "parts/_layout"
+@import "parts/header"
+
+
+.wrapper
+  overflow: hidden
+body, div, h1, h2, h3, h4, h5, h6, p, li, td, th, *
+  font-weight: 400
+  color: $flow_grey
+body
+  background-color: #F6F6F6
+  font-size: 90%
+  border: 10px solid red
+.white-box
+  +grid-media($bp_900)
+    background-color: #FFF
+    padding-bottom: 1rem
+h1
+  +fontSize(26px)
+  +grid-media($bp_700)
+    +fontSize(32px)
+  padding-bottom: $mobile_padding/2
+  margin-bottom: $mobile_padding
+  +grid-media($bp_900)
+    padding-bottom: $desktop_padding/2
+    margin-bottom: $desktop_padding
+h2
+  margin: 0 0 .5rem 0
+  text-transform: none
+  +grid-media($bp_600)
+  font-weight: bold
+  +fontSize(20px)
+
+#content
+  margin-bottom: 3rem
+  p
+    line-height: 1.6
+    margin: 1rem 0
+    &.intro
+      +fontSize(16px)
+      +grid-media($bp_700)
+        +fontSize(20px)
+  p, li, dl
+    max-width: 950px
+  p.footnotes
+    margin-bottom: 3rem
+    color: #999
+    font-style: italic
+    line-height: 1.6
+
+  h1
+
+    font-weight: bold
+    border-bottom: 4px solid #eee
+
+p strong
+  font-weight: 800
+
+
+
+.menu-icon
+  display: inline-block
+  float: right
+  margin-top: 1.5rem
+  +grid-media($bp_900)
+    display: none
+.overlay
+  display: none
+
+.activate
+  -webkit-overflow-scrolling: touch
+  height: 100%
+  overflow: hidden
+  body
+    overflow: hidden
+    -webkit-overflow-scrolling: touch
+    padding-top: 74px
+  .overlay
+    display: block
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background-color: rgba(#000, .5)
+    z-index: 999
+    opacity: 0
+    transition-duration: .3s
+
+  header#main-header
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    background-color: #FFF
+    nav.nav
+      .menu
+        position: absolute
+        display: block
+        z-index: 999
+        background-color: #FFF
+        right: 0
+        top: 74px
+        ul
+          li
+            display: block
+            border-top: 1px solid $flow_grey_light
+            margin: 0
+            padding: 0
+            a
+
+              padding: 1rem 20px
+              display: block
+
+.show-nav
+  header#main-header nav.nav .menu
+    transform: translateX(0)
+  .overlay
+    opacity: 1
+
+
+
+
+section#secondary
+  background-size: auto 100%
+  background-position: center
+  background-repeat: no-repeat
+  background-color: #EFF7FD
+  figure
+    +grid-media($bp_900)
+      display: none
+  .content
+    +grid-column(12)
+    padding-top: 1rem
+    padding-bottom: 1rem
+    +grid-media($bp_900)
+      +grid-column(6)
+      +grid-push(6)
+      padding-top: 6rem
+      padding-bottom: 6rem
+
+
+.button
+  color: #fff
+  background-color: $flow_blue
+  display: inline-block
+  padding: 10px 2rem
+  text-decoration: none
+  font-weight: 800
+  text-transform: uppercase
+  margin-top: 1rem
+
+
+section#content
+  padding: 0 $mobile_padding
+  +grid-media($bp_900)
+    padding: 0 $desktop_padding
+footer
+  text-align: center
+  margin: 0
+  padding-bottom: 2rem
+  .copyright
+    padding-top: 2rem
+    +grid-column(12)
+    border-top: 1px solid $flow_grey_light
+    margin-bottom: 0
+
+
+
+
+
+.description
+  margin-bottom: 4rem
+  ul
+    margin-bottom: 2rem
+#content
+  .row
+    &.cols-3 .col
+      h2.box
+        display: block
+        +grid-media($bp_900)
+          display: block
+          padding: 1rem
+          text-align: left
+
+      .description
+        +grid-media($bp_900)
+          padding-left: 1rem
+.red-button
+  display: inline-block
+  @extend .button
+  background-color: #F35344
+  border-radius: 3px
+  &:hover
+    color: #fff
+    background-color: lighten(#F35344, 10)
+.post-edit-link
+  @extend .red-button
+h2 .post-edit-link
+  display: inline-block
+  font-size: 10px
+  font-family: $sans-serif
+  padding: .3rem .5rem
+  line-height: 1
+  float: right
+.page-edit-link
+  position: fixed
+  bottom: 0
+  right: 0
+  z-index: 9999
+
+caption
+  background-color: #F6F6F6 !important
+  a
+    @extend .red-button
+#tablepress-1
+  .column-1
+    width: 50%
+    font-weight: 800
+    padding-left: 20px
+.dataTables_wrapper
+  margin-left: -20px
+  margin-right: -20px
+  background-color: #FFF
+
+#wash-packages-comparison
+  padding-top: 1rem
+  .package
+    h2
+      border-bottom: 2px solid #ccc
+      font-weight: bold
+      +fontSize(13px)
+      margin-bottom: 1rem
+      background-color: #eee
+      padding: $desktop_padding/4
+      +grid-media($bp_900)
+    li
+      background-image: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M9%2016.17L4.83%2012l-1.42%201.41L9%2019%2021%207l-1.41-1.41z%22%2F%3E%3C%2Fsvg%3E')
+      background-repeat: no-repeat
+      margin-bottom: 1rem
+      background-position: $mobile_padding/4 0
+
+      background-position: $desktop_padding/4 0
+      padding: 0 0 0 $desktop_padding
+      +grid-media($bp_900)
+
+// .header-contact-info
+//   +grid-media($bp_700)
+//     text-align: right
+//     padding: 1rem 1rem 0 0
+// .header-element
+//   display: inline-block
+//   vertical-align: middle
+//   text-align: left
+//   +grid-media($bp_700)
+//     padding-left: 1rem
+//   &.button-link a
+//     width: 100%
+//     padding: .5rem 0
+//     display: inline-block
+//     background-color: #ccc
+//     color: #333
+//     padding: .2rem 1.5rem
+//     border-radius: 4px
+//     text-align: center
+//     margin-bottom: 1rem
+
+dt
+  margin: 1rem 0
+dd
+  margin: 0 0 2rem 0
+  display: block
+aside
+  h3
+    font-size: 1.6rem
+    border-bottom: 1px solid #ccc
+    padding-bottom: .5rem
+    margin-bottom: 1rem
+  ul
+    list-style: disc
+    padding-left: 1.2rem
+  li
+    margin-bottom: .5rem
+  a
+    font-weight: bold
+    font-size: .8rem
+.show-global-hours .global-hours
+  display: block
+
+.global-hours
+  display: none
+  width: 300px
+  position: absolute
+  background-color: #eee
+  padding: 0
+  border: 1px solid #ccc
+  right: 1rem
+  top: 5rem
+  z-index: 8
+  box-shadow: 0 3px 6px rgba(#000, .1)
+  text-align: left
+  h3
+    background-color: #666
+    color: #fff
+    font-family: $sans-serif
+    font-weight: bold
+    font-style: normal
+    font-size: 1rem
+    padding: .5rem 1rem
+  .table
+    padding: 0 1rem
+
+
+.button-link
+  display: inline-block
+  a
+    display: inline-block
+    background-color: $blue
+    color: #fff
+    padding: 0 1rem
+    border-radius: 30px
+    line-height: 30px
+    font-weight: bold
+    text-transform: uppercase
+    +fontSize(10px)

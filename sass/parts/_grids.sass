@@ -1,0 +1,120 @@
+
+
+.pad 
+  padding: 1rem
+.thumbnails
+  +grid-container
+  +grid-collapse
+  >li 
+    margin-bottom: 1rem
+    img 
+      box-shadow: 0 3px 20px rgba(#000, .1)
+    +grid-column(6)
+    +grid-media($bp_600)
+      +grid-column(4)
+  &.halfs    
+    >li 
+      margin-bottom: 1rem
+      +grid-column(12)
+      +grid-media($bp_600)
+        +grid-column(6)
+    +grid-media($bp_1400)
+      +grid-container
+      +grid-collapse 
+      >li 
+        +grid-column(6)
+  &.process-gifs
+    >li 
+      margin-bottom: 3rem
+      +grid-column(12)
+      +grid-media($bp_700)
+        +grid-column(4)
+  h3
+    padding: 1rem 1rem 0 1rem
+    color: $purple
+  p 
+    border-bottom: 1px solid #eee
+    padding-bottom: .5rem
+    &.note 
+      border-bottom: 0
+  ul.two-columns
+    +grid-container
+    +grid-collapse 
+    >li 
+      +grid-column(6)    
+  figure 
+    position: relative  
+    img 
+      width: 100%
+      height: auto 
+    figcaption 
+      color: #999
+
+.row 
+  +grid-container
+  +grid-collapse
+  .contact-form
+    +grid-column(12)
+    border-top: 1px solid #eee
+    padding-top: 2rem
+  .instructions
+    +grid-column(12)
+  +grid-media($bp_900)
+    .contact-form
+      +grid-column(12)
+    .instructions
+      +grid-column(5)
+      +grid-push(1)
+      ol, li
+        list-style: decimal
+      ol 
+        padding: 0 0 0 1rem !important
+      li 
+        margin-bottom: 1rem 
+        +fontSize(13px)
+        strong 
+          +fontSize(18px) 
+
+ul.callouts 
+  li  
+    a 
+      @extend .panel-style
+      &:hover 
+        opacity: .8
+      h3 
+        color: $purple 
+        text-decoration: underline
+      figure  
+        img 
+          width: 100%  
+          max-width: none 
+          height: auto
+        figcaption
+          padding: 0 1rem 1rem 1rem
+
+ul.callouts 
+  +grid-container
+  +grid-collapse
+  >li 
+    +grid-column(12)
+  +grid-media($bp_600)
+    >li
+      +grid-column(6)  
+  +grid-media($bp_1400)
+    +grid-container
+    +grid-collapse
+    >li 
+      +grid-column(6)
+ul.callouts 
+  +grid-container
+  +grid-collapse
+  >li 
+    +grid-column(12)
+  +grid-media($bp_600)
+    >li
+      +grid-column(6)  
+  +grid-media($bp_1400)
+    +grid-container
+    +grid-collapse
+    >li 
+      +grid-column(6)
