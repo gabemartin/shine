@@ -653,6 +653,82 @@ nav.nav {
         font-size: 26px;
         font-size: 1.625rem; } }
 
+.flex-boxes, #wash-packages-comparison {
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  clear: both;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center; }
+  .flex-boxes::after, #wash-packages-comparison::after {
+    clear: both;
+    content: "";
+    display: block; }
+  .flex-boxes .flex-box, #wash-packages-comparison .flex-box, #wash-packages-comparison .package {
+    -ms-flex-item-align: stretch;
+        align-self: stretch;
+    background: #f7f6f6;
+    border-radius: 3px;
+    -webkit-box-shadow: inset 0 0 1px #ddd, 0 2px 4px #e6e5e5;
+            box-shadow: inset 0 0 1px #ddd, 0 2px 4px #e6e5e5;
+    display: block;
+    -webkit-box-flex: 2;
+        -ms-flex: 2 2 15em;
+            flex: 2 2 15em;
+    margin: 0.4em;
+    padding: 2em 2em 3em 2em;
+    text-decoration: none;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out; }
+    .flex-boxes .flex-box:nth-child(1), #wash-packages-comparison .flex-box:nth-child(1), #wash-packages-comparison .package:nth-child(1) {
+      border-top: 6px solid tomato; }
+      .flex-boxes .flex-box:nth-child(1):focus, #wash-packages-comparison .flex-box:nth-child(1):focus, #wash-packages-comparison .package:nth-child(1):focus, .flex-boxes .flex-box:nth-child(1):hover, #wash-packages-comparison .flex-box:nth-child(1):hover, #wash-packages-comparison .package:nth-child(1):hover {
+        background-color: rgba(255, 99, 71, 0.1); }
+    .flex-boxes .flex-box:nth-child(2), #wash-packages-comparison .flex-box:nth-child(2), #wash-packages-comparison .package:nth-child(2) {
+      border-top: 6px solid #72BFBF; }
+      .flex-boxes .flex-box:nth-child(2):focus, #wash-packages-comparison .flex-box:nth-child(2):focus, #wash-packages-comparison .package:nth-child(2):focus, .flex-boxes .flex-box:nth-child(2):hover, #wash-packages-comparison .flex-box:nth-child(2):hover, #wash-packages-comparison .package:nth-child(2):hover {
+        background-color: rgba(114, 191, 191, 0.1); }
+    .flex-boxes .flex-box:nth-child(3), #wash-packages-comparison .flex-box:nth-child(3), #wash-packages-comparison .package:nth-child(3) {
+      border-top: 6px solid #92B1E3; }
+      .flex-boxes .flex-box:nth-child(3):focus, #wash-packages-comparison .flex-box:nth-child(3):focus, #wash-packages-comparison .package:nth-child(3):focus, .flex-boxes .flex-box:nth-child(3):hover, #wash-packages-comparison .flex-box:nth-child(3):hover, #wash-packages-comparison .package:nth-child(3):hover {
+        background-color: rgba(146, 177, 227, 0.1); }
+    .flex-boxes .flex-box:nth-child(4), #wash-packages-comparison .flex-box:nth-child(4), #wash-packages-comparison .package:nth-child(4) {
+      border-top: 6px solid #E3D743; }
+      .flex-boxes .flex-box:nth-child(4):focus, #wash-packages-comparison .flex-box:nth-child(4):focus, #wash-packages-comparison .package:nth-child(4):focus, .flex-boxes .flex-box:nth-child(4):hover, #wash-packages-comparison .flex-box:nth-child(4):hover, #wash-packages-comparison .package:nth-child(4):hover {
+        background-color: rgba(227, 215, 67, 0.1); }
+    .flex-boxes .flex-box:nth-child(5), #wash-packages-comparison .flex-box:nth-child(5), #wash-packages-comparison .package:nth-child(5) {
+      border-top: 6px solid #CCC; }
+      .flex-boxes .flex-box:nth-child(5):focus, #wash-packages-comparison .flex-box:nth-child(5):focus, #wash-packages-comparison .package:nth-child(5):focus, .flex-boxes .flex-box:nth-child(5):hover, #wash-packages-comparison .flex-box:nth-child(5):hover, #wash-packages-comparison .package:nth-child(5):hover {
+        background-color: rgba(204, 204, 204, 0.1); }
+    .flex-boxes .flex-box:nth-child(6), #wash-packages-comparison .flex-box:nth-child(6), #wash-packages-comparison .package:nth-child(6) {
+      border-top: 6px solid #F6C05C; }
+      .flex-boxes .flex-box:nth-child(6):focus, #wash-packages-comparison .flex-box:nth-child(6):focus, #wash-packages-comparison .package:nth-child(6):focus, .flex-boxes .flex-box:nth-child(6):hover, #wash-packages-comparison .flex-box:nth-child(6):hover, #wash-packages-comparison .package:nth-child(6):hover {
+        background-color: rgba(246, 192, 92, 0.1); }
+    .flex-boxes .flex-box img, #wash-packages-comparison .flex-box img, #wash-packages-comparison .package img {
+      display: block;
+      height: 3em;
+      margin: 0 auto 1em;
+      opacity: 0.4; }
+    .flex-boxes .flex-box .flex-title, #wash-packages-comparison .flex-box .flex-title, #wash-packages-comparison .package .flex-title, #wash-packages-comparison .package h2 {
+      color: rgba(51, 51, 51, 0.7);
+      font-size: 1.2em;
+      margin-bottom: 0.5em; }
+    .flex-boxes .flex-box p, #wash-packages-comparison .flex-box p, #wash-packages-comparison .package p {
+      color: rgba(51, 51, 51, 0.6);
+      line-height: 1.5em;
+      margin: auto; }
+  .flex-boxes .flex-box-big, #wash-packages-comparison .flex-box-big {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 40em;
+            flex: 1 1 40em; }
+
 .wrapper {
   overflow: hidden; }
 
@@ -715,6 +791,9 @@ h2 {
 
 p strong {
   font-weight: 800; }
+
+#inside {
+  padding-top: 2rem; }
 
 .menu-icon {
   display: inline-block;
@@ -879,24 +958,6 @@ caption {
   margin-right: -20px;
   background-color: #FFF; }
 
-#wash-packages-comparison {
-  padding-top: 1rem; }
-  #wash-packages-comparison .package h2 {
-    border-bottom: 2px solid #ccc;
-    font-weight: bold;
-    font-size: 13px;
-    font-size: 0.8125rem;
-    margin-bottom: 1rem;
-    background-color: #eee;
-    padding: 10px; }
-  #wash-packages-comparison .package li {
-    background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M9%2016.17L4.83%2012l-1.42%201.41L9%2019%2021%207l-1.41-1.41z%22%2F%3E%3C%2Fsvg%3E");
-    background-repeat: no-repeat;
-    margin-bottom: 1rem;
-    background-position: 0 0;
-    background-position: 10px 0;
-    padding: 0 0 0 40px; }
-
 dt {
   margin: 1rem 0; }
 
@@ -961,3 +1022,10 @@ aside a {
     text-transform: uppercase;
     font-size: 10px;
     font-size: 0.625rem; }
+
+strike {
+  color: #ccc; }
+
+@media only screen and (min-width: 900px) {
+  .logo a {
+    margin-left: 2rem; } }

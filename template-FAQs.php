@@ -6,7 +6,9 @@
 	$intro_paragraph = get_field( "intro_paragraph" );
 ?>
 	<main role="main" id="inside">
-
+		<?php if ($feature_image): ?>
+			<figure id="feature-image"><img src="<?php echo $feature_image ?>" alt=""></figure>
+		<?php endif ?>
 
 		<div class="row">
 			<section id="content">

@@ -10,7 +10,9 @@ $main_content = get_field( "main_content" );
 ?>
 	<main role="main" id="inside">
 
-
+		<?php if ($feature_image): ?>
+			<figure id="feature-image"><img src="<?php echo $feature_image ?>" alt=""></figure>
+		<?php endif ?>
 		<div class="row">
 			<section id="content">
 					<h1><?php the_title(); ?></h1>

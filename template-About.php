@@ -2,22 +2,24 @@
 
 
 <?php if (have_posts()): while (have_posts()) : the_post(); ?>
-<?php  
+<?php
 
 $intro_paragraph = get_field( "intro_paragraph" );
-$main_content = get_field( "main_content" ); 
+$main_content = get_field( "main_content" );
 
-?> 
+?>
 	<main role="main" id="inside">
- 
+ 		<?php if ($feature_image): ?>
+			<figure id="feature-image"><img src="<?php echo $feature_image ?>" alt=""></figure>
+		<?php endif ?>
 
 		<div class="row">
-			<section id="content">   
+			<section id="content">
 					<h1><?php the_title(); ?></h1>
 					<p class="intro"><?php echo $intro_paragraph; ?></p>
 					<?php echo $main_content; ?>
-			</section> 
-		</div>  
+			</section>
+		</div>
   	</main>
 <?php endwhile; ?>
 
@@ -27,10 +29,10 @@ $main_content = get_field( "main_content" );
 	<article>
 
 		<h2><?php _e( 'Sorry, nothing to display.', 'html5blank' ); ?></h2>
-		
+
 	</article>
 	<!-- /article -->
 <?php endif; ?>
- 
+
 
 <?php get_footer(); ?>

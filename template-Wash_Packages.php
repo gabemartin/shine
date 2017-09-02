@@ -2,24 +2,26 @@
 
 
 <?php if (have_posts()): while (have_posts()) : the_post(); ?>
-<?php  
-  
-$feature_image = get_field( "feature_image" );
-$intro_paragraph = get_field( "intro_paragraph" ); 
+<?php
 
-?> 
- 
+$feature_image = get_field( "feature_image" );
+$intro_paragraph = get_field( "intro_paragraph" );
+
+?>
+
 	<main role="main" id="inside">
- 
-		<figure id="feature-image"><img src="<?php echo $feature_image ?>" alt=""></figure>
+
+		<?php if ($feature_image): ?>
+			<figure id="feature-image"><img src="<?php echo $feature_image ?>" alt=""></figure>
+		<?php endif ?>
 
 		<div class="row">
-			<section id="content">   
+			<section id="content">
 				<h1><?php the_title(); ?></h1>
-				<p class="intro"><?php echo $intro_paragraph; ?></p> 
+				<p class="intro"><?php echo $intro_paragraph; ?></p>
 				<?php include("custom/packages.php"); ?>
-			</section> 
-		</div>  
+			</section>
+		</div>
   	</main>
 <?php endwhile; ?>
 
@@ -29,9 +31,9 @@ $intro_paragraph = get_field( "intro_paragraph" );
 	<article>
 
 		<h2><?php _e( 'Sorry, nothing to display.', 'html5blank' ); ?></h2>
-		
+
 	</article>
 	<!-- /article -->
 <?php endif; ?>
- 
+
 <?php get_footer(); ?>

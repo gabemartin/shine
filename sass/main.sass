@@ -12,6 +12,7 @@ $black: #373C3A
 @import "bitters/_base.scss"
 @import "parts/_layout"
 @import "parts/header"
+@import "parts/_flexbox"
 
 
 .wrapper
@@ -68,6 +69,8 @@ p strong
   font-weight: 800
 
 
+#inside
+  padding-top: 2rem
 
 .menu-icon
   display: inline-block
@@ -77,6 +80,7 @@ p strong
     display: none
 .overlay
   display: none
+
 
 .activate
   -webkit-overflow-scrolling: touch
@@ -235,25 +239,30 @@ caption
   background-color: #FFF
 
 #wash-packages-comparison
-  padding-top: 1rem
+  @extend .flex-boxes
   .package
+    @extend .flex-box
     h2
-      border-bottom: 2px solid #ccc
-      font-weight: bold
-      +fontSize(13px)
-      margin-bottom: 1rem
-      background-color: #eee
-      padding: $desktop_padding/4
-      +grid-media($bp_900)
-    li
-      background-image: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M9%2016.17L4.83%2012l-1.42%201.41L9%2019%2021%207l-1.41-1.41z%22%2F%3E%3C%2Fsvg%3E')
-      background-repeat: no-repeat
-      margin-bottom: 1rem
-      background-position: $mobile_padding/4 0
+      @extend .flex-title
+  // padding-top: 1rem
+  // .package
+  //   h2
+  //     border-bottom: 2px solid #ccc
+  //     font-weight: bold
+  //     +fontSize(13px)
+  //     margin-bottom: 1rem
+  //     background-color: #eee
+  //     padding: $desktop_padding/4
+  //     +grid-media($bp_900)
+  //   li
+  //     background-image: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M9%2016.17L4.83%2012l-1.42%201.41L9%2019%2021%207l-1.41-1.41z%22%2F%3E%3C%2Fsvg%3E')
+  //     background-repeat: no-repeat
+  //     margin-bottom: 1rem
+  //     background-position: $mobile_padding/4 0
 
-      background-position: $desktop_padding/4 0
-      padding: 0 0 0 $desktop_padding
-      +grid-media($bp_900)
+  //     background-position: $desktop_padding/4 0
+  //     padding: 0 0 0 $desktop_padding
+  //     +grid-media($bp_900)
 
 // .header-contact-info
 //   +grid-media($bp_700)
@@ -334,3 +343,10 @@ aside
     font-weight: bold
     text-transform: uppercase
     +fontSize(10px)
+
+strike
+  color: #ccc
+
+.logo a
+  +grid-media($bp_900)
+    margin-left: 2rem
