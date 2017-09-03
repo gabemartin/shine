@@ -37,8 +37,8 @@ register_taxonomy("countries", array("FAQ"), array(
     "label" => "Countries",
     "singular_label" => "Country",
     "rewrite" => true
-)); 
- 
+));
+
 
 function create_Benefit_post_type() {
     register_post_type( 'Benefit',
@@ -77,7 +77,7 @@ register_taxonomy("countries", array("Benefit"), array(
     "label" => "Countries",
     "singular_label" => "Country",
     "rewrite" => true
-)); 
+));
 
 function create_Global_post_type() {
     register_post_type( 'Global',
@@ -116,6 +116,45 @@ register_taxonomy("countries", array("Global"), array(
     "label" => "Countries",
     "singular_label" => "Country",
     "rewrite" => true
-)); 
- 
+));
+
+function create_Package_post_type() {
+    register_post_type( 'Package',
+        array(
+            'labels' => array(
+                'name' => 'Packages',
+                'singular_name' => 'Package',
+                'add_new' => 'Add New',
+                'add_new_item' => 'Add New Package',
+                'edit_item' => 'Edit Package',
+                'new_item' => 'New Package',
+                'view_item' => 'View Package',
+                'search_items' => 'Search Packages',
+                'not_found' =>  'Nothing Found',
+                'not_found_in_trash' => 'Nothing found in the Trash',
+                'parent_item_colon' => ''
+            ),
+            'public' => true,
+            'publicly_queryable' => true,
+            'show_ui' => true,
+            'query_var' => true,
+            //'menu_icon' => get_stylesheet_directory_uri() . '/yourimage.png',
+            'rewrite' => true,
+            'capability_type' => 'post',
+            'hierarchical' => false,
+            'menu_position' => null,
+            'supports' => array()
+        )
+    );
+}
+add_action( 'init', 'create_Package_post_type' );
+
+//Package countries taxonomy
+register_taxonomy("countries", array("Package"), array(
+    "hierarchical" => false,
+    "label" => "Countries",
+    "singular_label" => "Country",
+    "rewrite" => true
+));
+
 

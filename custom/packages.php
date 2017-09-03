@@ -12,6 +12,7 @@ if ( is_user_logged_in() ) {
 				'orderby' 	=> 'menu_order',
 				'post_type' => 'Benefit',
 				'order'     => 'ASC',
+				'posts_per_page' => 200,
 			);
 			$your_query = new WP_Query( $args );
 			while ( $your_query->have_posts() ) : $your_query->the_post();
@@ -19,11 +20,11 @@ if ( is_user_logged_in() ) {
 			if (
 				in_array($plan, $available_for)
 			) {
-				echo "<li>";
+				echo "<li class='y'>";
 					the_title();
 				echo "</li>";
 			} else {
-				echo "<li><strike>";
+				echo "<li class='n'><strike>";
 					the_title();
 				echo "</strike></li>";
 			}

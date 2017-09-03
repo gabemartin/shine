@@ -958,6 +958,22 @@ caption {
   margin-right: -20px;
   background-color: #FFF; }
 
+#wash-packages-comparison .package {
+  text-align: left;
+  padding: 0; }
+  #wash-packages-comparison .package h2 {
+    padding: 1rem 0 1rem 13.3333333333px;
+    margin: 0; }
+  #wash-packages-comparison .package ul {
+    padding: 0; }
+  #wash-packages-comparison .package li.y {
+    background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M9%2016.17L4.83%2012l-1.42%201.41L9%2019%2021%207l-1.41-1.41z%22%2F%3E%3C%2Fsvg%3E"); }
+  #wash-packages-comparison .package li {
+    border-top: 1px solid #f0efef;
+    background-repeat: no-repeat;
+    background-position: 10px 13.3333333333px;
+    padding: 1rem 0.5rem 1rem 40px; }
+
 dt {
   margin: 1rem 0; }
 
