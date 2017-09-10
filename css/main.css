@@ -604,36 +604,47 @@ nav.nav {
     display: none; }
   nav.nav .menu-icon {
     display: none; }
-  nav.nav .menu {
-    width: calc(100% - 30px);
-    float: left;
-    margin-left: 15px; }
-    nav.nav .menu ul {
-      display: flex;
-      margin: auto; }
-      @media only screen and (min-width: 900px) {
-        nav.nav .menu ul {
-          margin-left: 40px; } }
-    nav.nav .menu li {
-      flex-grow: 1;
-      text-align: center; }
-      nav.nav .menu li a {
-        padding: 15px 0;
-        color: #fff;
-        display: block; }
-        nav.nav .menu li a:hover {
-          background-color: #000;
-          cursor: pointer; }
+  @media only screen and (min-width: 800px) {
+    nav.nav .menu {
+      width: calc(100% - 30px);
+      float: left;
+      margin-left: 15px; } }
+  nav.nav .menu ul {
+    display: flex;
+    justify-content: flex-start;
+    margin: auto; }
+    @media only screen and (min-width: 900px) {
+      nav.nav .menu ul {
+        margin-left: 40px; } }
+  nav.nav .menu li {
+    text-align: center;
+    flex-grow: 1;
+    font-size: 14px;
+    font-size: 0.875rem;
+    border-left: 1px solid #4f5754; }
+    @media only screen and (min-width: 800px) {
+      nav.nav .menu li {
+        flex-grow: 0; } }
+    nav.nav .menu li a {
+      padding: 15px 0;
+      color: #fff;
+      display: block; }
+      nav.nav .menu li a:hover {
+        background-color: #000;
+        cursor: pointer; }
+    nav.nav .menu li:last-child {
+      border-right: 0; }
+    nav.nav .menu li:first-child {
+      border-left: 0; }
+    @media only screen and (min-width: 800px) {
+      nav.nav .menu li:first-child {
+        border-left: 1px solid #4f5754; }
+      nav.nav .menu li:last-child {
+        border-right: 1px solid #4f5754; } }
   @media only screen and (min-width: 800px) {
     nav.nav .menu ul {
       text-align: left; }
-    nav.nav .menu li {
-      font-size: 14px;
-      font-size: 0.875rem;
-      border-left: 1px solid #4f5754; }
-      nav.nav .menu li:last-child {
-        border-right: 1px solid #4f5754; }
-      nav.nav .menu li a {
+      nav.nav .menu ul a {
         padding: 1rem 2rem; } }
 
 #feature-image img {
