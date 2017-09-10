@@ -596,6 +596,9 @@ footer p {
     #content {
       padding: 0 40px; } }
 
+#inside {
+  padding-top: 2rem; }
+
 header#main-header {
   padding-top: 15px; }
   header#main-header .logo {
@@ -943,15 +946,6 @@ h2 .post-edit-link {
   bottom: 0;
   right: 0;
   z-index: 9999; }
-
-#inside {
-  padding-top: 2rem; }
-
-#content {
-  padding: 0 0; }
-  @media only screen and (min-width: 900px) {
-    #content {
-      padding: 0 40px; } }
 
 #tablepress-1 .column-1 {
   width: 50%;
