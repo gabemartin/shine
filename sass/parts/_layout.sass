@@ -7,24 +7,6 @@ $neat-grid: ( columns: 12, gutter: 15px )
   .col
     +grid-column(12)
 
-// header#main-header
-//   +grid-container
-//   .logo
-//     +grid-column(12)
-//     +grid-media($bp_900)
-//       +grid-column(3)
-
-// header#main-header
-// 	nav.nav
-// 		position: absolute
-// 		top: 1rem
-// 		right: 1rem
-// 		+grid-media($bp_900)
-// 			position: relative
-// 			top: auto
-// 			right: auto
-// 			+grid-column(12)
-
 section#content
   +grid-column(12)
   &.narrow
@@ -47,22 +29,6 @@ section#content
     +grid-column(12)
     +grid-media($bp_700)
     	+grid-column(3)
-
-// .header-contact-info
-// 	position: relative
-// 	+grid-container
-// 	address.header-element
-// 		display: inline-block
-// 	@media only screen and (max-width: 900px)
-// 		address.header-element
-// 			display: none
-// 		.map-link
-// 			+grid-column(6)
-// 		.hours-link
-// 			+grid-column(6)
-//   +grid-media($bp_900)
-//   	+grid-column(9)
-
 
 .add-column
   +grid-column(12)
