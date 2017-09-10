@@ -1,9 +1,3 @@
-#testimonial-guy, #what-people-are-saying .quote, #btn-our-process {
-  opacity: 0; }
-
-.hidden-step {
-  display: none; }
-
 body {
   font-family: "Noto Sans", sans-serif;
   text-align: left; }
@@ -467,14 +461,14 @@ dd {
 strike {
   color: #ccc; }
 
-.row, nav.nav .menu {
+.row {
   max-width: 1200px;
   margin: auto; }
-  .row::after, nav.nav .menu::after {
+  .row::after {
     clear: both;
     content: "";
     display: block; }
-  .row .col, nav.nav .menu .col {
+  .row .col {
     width: calc(100% - 30px);
     float: left;
     margin-left: 15px; }
@@ -487,16 +481,16 @@ section#content {
   @media only screen and (min-width: 900px) {
     section#content {
       padding: 0 40px; } }
-  section#content .row, section#content nav.nav .menu, nav.nav section#content .menu {
+  section#content .row {
     margin-left: -15px;
     margin-right: -15px;
     width: calc(100% + 30px); }
-    section#content .row.cols-3 .col, section#content nav.nav .cols-3.menu .col, nav.nav section#content .cols-3.menu .col {
+    section#content .row.cols-3 .col {
       width: calc(100% - 30px);
       float: left;
       margin-left: 15px; }
       @media only screen and (min-width: 900px) {
-        section#content .row.cols-3 .col, section#content nav.nav .cols-3.menu .col, nav.nav section#content .cols-3.menu .col {
+        section#content .row.cols-3 .col {
           width: calc(33.3333333333% - 20px);
           float: left;
           margin-left: 15px; } }
@@ -577,21 +571,23 @@ footer p.copyright {
   padding-top: 2rem; }
 
 header#main-header {
-  padding-top: 15px; }
+  padding-top: 2rem;
+  padding-bottom: 1rem; }
   header#main-header .logo {
     width: calc(50% - 22.5px);
     float: left;
     margin-left: 15px; }
     header#main-header .logo a {
-      width: 118px;
+      width: 160px;
       display: inline-block; }
       @media only screen and (min-width: 900px) {
         header#main-header .logo a {
-          margin-left: 2rem; } }
+          margin-left: 40px; } }
   header#main-header .header-contact-info {
     width: calc(50% - 22.5px);
     float: left;
     margin-left: 15px;
+    margin-bottom: 1rem;
     text-align: right; }
     header#main-header .header-contact-info .header-element {
       vertical-align: middle; }
@@ -600,7 +596,7 @@ header#main-header {
       @media only screen and (min-width: 600px) {
         header#main-header .header-contact-info address {
           display: inline-block;
-          padding: 0 1rem 1rem 0; } }
+          padding: 0 1rem 0 0; } }
 
 nav.nav {
   background-color: #373C3A; }
@@ -608,23 +604,26 @@ nav.nav {
     display: none; }
   nav.nav .menu-icon {
     display: none; }
-  nav.nav .menu ul {
+  nav.nav .menu {
     width: calc(100% - 30px);
     float: left;
-    margin-left: 15px;
-    text-align: center; }
-  nav.nav .menu li {
-    display: inline-block;
-    font-size: 10px;
-    font-size: 0.625rem; }
-    nav.nav .menu li a {
-      display: block;
-      background-color: #373C3A;
-      color: #fff;
-      text-transform: uppercase;
-      padding: 1rem .3rem;
-      text-decoration: none;
-      font-weight: bold; }
+    margin-left: 15px; }
+    nav.nav .menu ul {
+      display: flex;
+      margin: auto; }
+      @media only screen and (min-width: 900px) {
+        nav.nav .menu ul {
+          margin-left: 40px; } }
+    nav.nav .menu li {
+      flex-grow: 1;
+      text-align: center; }
+      nav.nav .menu li a {
+        padding: 15px 0;
+        color: #fff;
+        display: block; }
+        nav.nav .menu li a:hover {
+          background-color: #000;
+          cursor: pointer; }
   @media only screen and (min-width: 800px) {
     nav.nav .menu ul {
       text-align: left; }
@@ -912,21 +911,22 @@ h2 .post-edit-link {
 
 .screen-reader-response {
   font-weight: bold;
-  color: #f35344; }
+  color: #F35344; }
   .screen-reader-response ul {
     display: none; }
 
 .wpcf7-not-valid-tip {
-  background-color: #fbe187;
   font-size: 12px;
   font-size: 0.75rem;
-  float: right;
-  margin-top: -1rem;
   border-radius: 4px;
-  display: inline-block;
-  padding: 6px;
+  display: block;
   font-family: "Noto Sans", sans-serif;
-  font-style: normal; }
+  font-style: normal;
+  color: #F35344;
+  margin-top: -.5rem; }
+
+.wpcf7-not-valid {
+  border-color: #F35344; }
 
 #tablepress-1 .column-1 {
   width: 50%;

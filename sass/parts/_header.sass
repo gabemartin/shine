@@ -1,14 +1,16 @@
 header#main-header
-  padding-top: 15px
+  padding-top: 2rem
+  padding-bottom: 1rem
   .logo
     +grid-column(6)
     a
-      width: 118px
+      width: 160px
       display: inline-block
       +grid-media($bp_900)
-        margin-left: 2rem
+        margin-left: 40px
   .header-contact-info
     +grid-column(6)
+    margin-bottom: 1rem
     text-align: right
     .header-element
       vertical-align: middle
@@ -16,7 +18,7 @@ header#main-header
       display: none
       +grid-media($bp_600)
         display: inline-block
-        padding: 0 1rem 1rem 0
+        padding: 0 1rem 0 0
     .map-link
     .hours-link
 
@@ -28,21 +30,37 @@ nav.nav
   .menu-icon
     display: none
   .menu
-    @extend .row
+    +grid-column(12)
     ul
-      +grid-column(12)
-      text-align: center
+      display: flex
+      margin: auto
+      +grid-media($bp_900)
+        margin-left: 40px
     li
-      display: inline-block
-      +fontSize(10px)
+      flex-grow: 1
+      text-align: center
       a
-        display: block
-        background-color: $black
+        padding: 15px 0
         color: #fff
-        text-transform: uppercase
-        padding: 1rem .3rem
-        text-decoration: none
-        font-weight: bold
+        display: block
+        &:hover
+          background-color: #000
+          cursor: pointer
+    // @extend .row
+    // ul
+    //   +grid-column(12)
+    //   text-align: center
+    // li
+    //   display: inline-block
+    //   +fontSize(10px)
+    //   a
+    //     display: block
+    //     background-color: $black
+    //     color: #fff
+    //     text-transform: uppercase
+    //     padding: 1rem .3rem
+    //     text-decoration: none
+    //     font-weight: bold
   +grid-media($bp_800)
     .menu
       ul
