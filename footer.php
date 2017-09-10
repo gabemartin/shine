@@ -11,6 +11,7 @@
 			<!-- /footer -->
 
 		</div>
+		<div class="debug"></div>
 		<!-- /wrapper -->
 
 		<?php wp_footer(); ?>

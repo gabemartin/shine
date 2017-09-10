@@ -63,18 +63,31 @@ section#content
 //   +grid-media($bp_900)
 //   	+grid-column(9)
 
+
 .add-column
-	+grid-column(12)
-	+grid-media($bp_700)
-		+grid-column(8)
-		+grid-shift(-3)
+  +grid-column(12)
+  +grid-media($bp_700)
+    +grid-column(7)
+    +grid-shift(-4)
+  +grid-media($bp_1000)
+    +grid-column(8)
+    +grid-shift(-3)
+    margin-left: 15px
 aside
-	+grid-column(12)
-	+grid-media($bp_700)
-		+grid-column(3)
-		+grid-shift(9)
+  +grid-column(12)
+  +grid-media($bp_700)
+    +grid-column(4)
+    +grid-shift(8)
+  +grid-media($bp_1000)
+    +grid-column(3)
+    +grid-shift(9)
 
 footer
   +grid-container
   p
     +grid-column(12)
+
+#content
+  padding: 0 $mobile_padding
+  +grid-media($bp_900)
+    padding: 0 $desktop_padding

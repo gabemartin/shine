@@ -1,0 +1,51 @@
+
+body, div, h1, h2, h3, h4, h5, h6, p, li, td, th, *
+  font-weight: 400
+  color: $flow_grey
+body
+  background-color: #F6F6F6
+  font-size: 90%
+.white-box
+  +grid-media($bp_900)
+    background-color: #FFF
+    padding-bottom: 1rem
+h1
+  +fontSize(26px)
+  +grid-media($bp_700)
+    +fontSize(32px)
+  padding-bottom: $mobile_padding/2
+  margin-bottom: $mobile_padding
+  +grid-media($bp_900)
+    padding-bottom: $desktop_padding/2
+    margin-bottom: $desktop_padding
+h2
+  margin: 0 0 .5rem 0
+  text-transform: none
+  +grid-media($bp_600)
+  font-weight: bold
+  +fontSize(20px)
+
+#content
+  margin-bottom: 3rem
+  p
+    line-height: 1.6
+    margin: 1rem 0
+    &.intro
+      +fontSize(16px)
+      +grid-media($bp_700)
+        +fontSize(20px)
+  p, li, dl
+    max-width: 950px
+  p.footnotes
+    margin-bottom: 3rem
+    color: #999
+    font-style: italic
+    line-height: 1.6
+
+  h1
+
+    font-weight: bold
+    border-bottom: 4px solid #eee
+
+p strong
+  font-weight: 800

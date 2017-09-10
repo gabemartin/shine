@@ -1,0 +1,42 @@
+
+.toggleAdmin.on, .toggleAdmin.off
+  display: inline-block 
+  background-color: #999 
+  position: fixed 
+  bottom: 0
+  right: 0
+  line-height: 40px
+  font-weight: bold
+  color: #fff
+  z-index: 9999 
+  padding: 0 1rem
+  font-weight: bold 
+  cursor: pointer
+  &:hover 
+    background-color: #666 
+.adminOff 
+  .admin
+    display: none 
+  .toggleAdmin.off
+    display: none
+.adminOn
+  .admin
+    display: block 
+  .toggleAdmin.on
+    display: none
+
+.admin 
+  position: absolute 
+  z-index: 9 
+  a 
+    display: inline-block
+    color: #fff !important
+    text-decoration: none 
+    font-weight: bold
+    border-radius: 4px
+    font-size: 12px 
+    background-color: #c00
+    padding: 3px 10px 
+    opacity: .5 
+    &:hover 
+      opacity: 1 

@@ -1,0 +1,19 @@
+footer 
+  +grid-container
+  text-align: center
+  padding-bottom: 2rem
+  p 
+    color: #999
+  p, li 
+    +fontSize(13px)
+  .padding 
+    padding-top: 2rem
+    margin-top: 2rem 
+    +grid-column(12)
+    +grid-media($bp_900)
+      +grid-column(10)
+      +grid-push(1)
+    ul, li 
+      display: inline-block
+      li  
+        margin: .2rem

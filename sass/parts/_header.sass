@@ -5,6 +5,8 @@ header#main-header
     a
       width: 118px
       display: inline-block
+      +grid-media($bp_900)
+        margin-left: 2rem
   .header-contact-info
     +grid-column(6)
     text-align: right
@@ -110,13 +112,6 @@ nav.nav
       font-size: 5vw
     p
       +fontSize(26px)
-
-
-
-
-
-
-
 
 
 

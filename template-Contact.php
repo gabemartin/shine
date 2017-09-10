@@ -17,7 +17,7 @@ $main_content = get_field( "main_content" );
 			<section id="content">
 					<h1><?php the_title(); ?></h1>
 					<p class="intro"><?php echo $intro_paragraph; ?></p>
-					<div class="row">
+					<div class="row collapse">
 
 						<aside class="hours">
 							<h3>Hours</h3>
