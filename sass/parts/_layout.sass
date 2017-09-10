@@ -9,18 +9,19 @@ $neat-grid: ( columns: 12, gutter: 15px )
 
 section#content
   +grid-column(12)
-  &.narrow
-    +grid-media($bp_700)
-      +grid-column(10)
-      +grid-push(1)
-
-#content
+  padding: 0 $mobile_padding
+  +grid-media($bp_900)
+    padding: 0 $desktop_padding
   .row
     +grid-collapse
     &.cols-3 .col
       +grid-column(12)
       +grid-media($bp_900)
         +grid-column(4)
+  &.narrow
+    +grid-media($bp_700)
+      +grid-column(10)
+      +grid-push(1)
 
 #wash-packages-comparison
   +grid-column
@@ -50,12 +51,8 @@ aside
 
 footer
   +grid-container
-  p
+  p.copyright
     +grid-column(12)
 
-#content
-  padding: 0 $mobile_padding
-  +grid-media($bp_900)
-    padding: 0 $desktop_padding
 #inside
   padding-top: 2rem
