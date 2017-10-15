@@ -1,6 +1,10 @@
 header#main-header
-  padding-top: 2rem
-  padding-bottom: 1rem
+  background-color: darken($black, 2)
+  padding-top: 1rem
+  padding-bottom: .5rem
+  +grid-media($bp_900)
+    padding-top: 2rem
+    padding-bottom: 1rem
   .logo
     +grid-column(6)
     a
@@ -16,9 +20,12 @@ header#main-header
       vertical-align: middle
     address
       display: none
+      div
+        color: #fff !important
       +grid-media($bp_600)
-        display: inline-block
-        padding: 0 1rem 0 0
+        display: block
+        padding: .5rem 0 0 0
+        margin: 0
     .map-link
     .hours-link
 
@@ -44,12 +51,26 @@ nav.nav
       +fontSize(14px)
       +grid-media($bp_800)
         flex-grow: 0
+      &.page-item-2
+        display: none
+        +grid-media($bp_800)
+          display: block
+      &.page-item-41
+        border-left: none
+        +grid-media($bp_800)
+          border-left: 1px solid lighten($black, 10)
+      &.current_page_item a
+        background-color: darken($black, 5)
+        color: $yellow
       a
         padding: 15px 0
         color: #fff
         display: block
+        text-transform: uppercase
+        font-weight: bold
+        +fontSize(12px)
         &:hover
-          background-color: #000
+          background-color: darken($black, 5)
           cursor: pointer
       border-left: 1px solid lighten($black, 10)
       &:last-child
@@ -71,22 +92,32 @@ nav.nav
 
 
 
-#feature-image
-  img
-    max-width: none
-    width: 100%
-    display: block
 
 #homepage-intro
   background-color: $blue
-  margin-bottom: 2rem
-  padding-top: 2rem
-  padding-bottom: 2rem
+  position: relative
   .column
     +grid-column(12)
     text-align: center
-    *
-      color: #fff
+  .homepage-lead
+    padding: 2rem 0
+    text-shadow: 0 2px 6px rgba(#000, .4)
+    +grid-media($bp_900)
+      z-index: 10
+      position: absolute
+      top: 50%
+      transform: translateY(-50%)
+      text-align: center
+      left: 0
+      width: 100%
+      padding: 0
+  #feature-image
+    position: relative
+    z-index: 1
+    img
+      max-width: none
+      width: 100%
+      display: block
   .lead-in
     font-weight: bold
     +fontSize(18px)
@@ -105,16 +136,20 @@ nav.nav
       left: auto
       right: -45px
   h1
+    color: #fff
     font-weight: bold
     margin: 0
     +fontSize(34px)
+    em
+      font-style: normal
+      color: $yellow
+      font-weight: bold
   p
     margin: 0
     font-style: italic
+    color: #fff
     +fontSize(18px)
   +grid-media($bp_900)
-    padding-top: 4rem
-    padding-bottom: 4rem
     .column
       +grid-column(8)
       +grid-push(2)

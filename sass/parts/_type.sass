@@ -10,9 +10,9 @@ body
     background-color: #FFF
     padding-bottom: 1rem
 h1
-  +fontSize(26px)
+  +fontSize(40px)
   +grid-media($bp_700)
-    +fontSize(32px)
+    +fontSize(48px)
   padding-bottom: $mobile_padding/2
   margin-bottom: $mobile_padding
   +grid-media($bp_900)
@@ -30,10 +30,17 @@ h2
   p
     line-height: 1.6
     margin: 1rem 0
+    +fontSize(18px)
     &.intro
       +fontSize(16px)
+      font-family: $sans-serif
+      font-weight: 900
+      +fontSize(20px)
+      letter-spacing: -.1rem
+      line-height: 1.2
       +grid-media($bp_700)
-        +fontSize(20px)
+        +fontSize(30px)
+        letter-spacing: -.1rem
   p, li, dl
     max-width: 950px
   p.footnotes

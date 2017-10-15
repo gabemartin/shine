@@ -49,7 +49,7 @@ if ( is_user_logged_in() ) {
 			$pkg_class = strtolower(str_replace(" ", "-", $title));
 
 			echo "<div class='package $pkg_class'><h2>";
-			echo $title;
+			echo "<span>Shine</span> <span class='title'>" . $title . "</span>";
 			echo "</h2><ul>";
 			//listPackageBenefits($title);
 
